@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# HATE MAKEFILES!
+
+CC=gcc
+OPTS=
+
+if [ "$1" == "all" ] || [ "$1" == "" ]; then
+	FILES=*.c
+else
+	FILES=mus$1.c
+fi
+
+for i in $FILES; do
+	FILE=${i%.*}
+	echo "$i -> $FILE"
+	$CC $OPTS -o $FILE $i
+done;
