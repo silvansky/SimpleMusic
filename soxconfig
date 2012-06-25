@@ -1,0 +1,8 @@
+#!/bin/bash
+
+SOX_BITRATE="8k"
+SOX_CHANNELS=2
+SOX_BITS=8
+SOX_OPTS="-b ${SOX_BITS} -r ${SOX_BITRATE} -t raw -c ${SOX_CHANNELS} -e signed-integer"
+
+export SOX_OPTIONS

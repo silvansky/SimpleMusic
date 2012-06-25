@@ -1,7 +1,11 @@
 #!/bin/sh
 
+. ./soxconfig
+
 SUFFIX=$1
 TIMEOUT=$2
 FILE=mus${SUFFIX}
 
-./${FILE} | sox -b 8 -r 8k -t raw -c 1 -e signed-integer - ${FILE}.wav trim 0 0:$TIMEOUT
+echo "Recording $TIMEOUT seconds of $FILE with sox options ${SOX_OPTS}..."
+
+./${FILE} | sox ${SOX_OPTS}  - ${FILE}.wav trim 0 0:$TIMEOUT

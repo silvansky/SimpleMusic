@@ -3,5 +3,11 @@
 # you need sox to use this script
 # also, be sure your files named "mus${SUFFIX}"
 
+. ./soxconfig
+
 SUFFIX=$1
-./mus${SUFFIX} | play -b 8 -r 8k -t raw -c 1 -e signed-integer -
+FILE=mus${SUFFIX}
+
+echo "Playing $FILE with options: ${SOX_OPTS}"
+./${FILE} | play ${SOX_OPTS} -
+
