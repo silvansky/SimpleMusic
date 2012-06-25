@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# be sure your files named "mus${SUFFIX}"
+
+EDITOR=mcedit
+SUFFIX=$1
+
+$EDITOR mus${SUFFIX}.c
