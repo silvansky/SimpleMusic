@@ -1,8 +1,7 @@
 #!/bin/sh
 
 # you need sox to use this script
-# sox_l is alias for "play -b 8 -r 8k -t raw -c 1 -e signed-integer -"
 # also, be sure your files named "mus${SUFFIX}"
 
 SUFFIX=$1
-./mus${SUFFIX} | sox_l
+./mus${SUFFIX} | play -b 8 -r 8k -t raw -c 1 -e signed-integer -
