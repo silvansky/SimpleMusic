@@ -1,0 +1,3 @@
+#!/bin/sh
+
+./mus$1 | sox_l
