@@ -1,0 +1,7 @@
+#!/bin/sh
+
+SUFFIX=$1
+TIMEOUT=$2
+FILE=mus${SUFFIX}
+
+./${FILE} | sox -b 8 -r 8k -t raw -c 1 -e signed-integer - ${FILE}.wav trim 0 0:$TIMEOUT
