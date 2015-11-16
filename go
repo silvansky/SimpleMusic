@@ -7,4 +7,4 @@ if [ "$1" == "" ]; then
 	exit 1
 fi
 
-./edit $1 && ./build $1 && ./run $1
+./build $1 && ./run $1

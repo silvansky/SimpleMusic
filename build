@@ -3,7 +3,7 @@
 # HATE MAKEFILES!
 
 CC=gcc
-OPTS=
+OPTS=-w
 
 if [ "$1" == "all" ] || [ "$1" == "" ]; then
 	FILES=*.c
